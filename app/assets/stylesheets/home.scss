@@ -43,7 +43,7 @@
 			}
 
 			&--back {
-				
+	
 				transform: rotateY(180deg);
 				
 				
@@ -72,18 +72,18 @@
         	}
 
         	&--3 {
-        		background-image: linear-gradient(to right bottom, #2998FF, #5643FA), url(./77.png);
+        		background-image: linear-gradient(to right bottom, #FFF, #56DFFF), url(./77.png);
         	}
 
         	&--4 {
-        		background-image: linear-gradient(to right bottom, #2998FF, #5643FA), url(./78.png);
+        		background-image: linear-gradient(to right bottom, #FFF, #56DFFF), url(./78.png);
         	}
 
         	&--5 {
-				background-image: &nbsp;
-			}
+						background-image: &nbsp;
+					}
 
-			&--6 {
+					&--6 {
         		background-image: &nbsp;
         	}
 
@@ -108,7 +108,7 @@
 			}
 			&--2 {
         		background-image: linear-gradient(to right bottom, rgba(#2998FF, .85), rgba(#5643FA, .85));
-			}
+			} 
 		}
                                                                                      
 }                                 
