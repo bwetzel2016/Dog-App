@@ -11,42 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="field form-group">
+    
+    <%= form.text_field :first_name, 
+    class: "form-control", 
+    placeholder:"First Name"%>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+  <div class="field form-group">
+    
+    <%= form.text_field :last_name, 
+    class: "form-control",
+    placeholder:"Last Name" %>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :znumber %>
-    <%= form.text_field :znumber %>
+  <div class="field form-group">
+    
+    <%= form.text_field :znumber, 
+    class: "form-control", 
+    placeholder:"Znumber" %>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+
+  <div class="field form-group">
+  <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  <small class="form-text text-muted">We will never share your email with anyone else.</small>
+  
+  
+</div>
+
+<div class="field form-group">
+  <%= form.text_field :advisor, 
+  class: "form-control", 
+  placeholder: "Advisor" %>
+  
+  
+</div>
+
+
+  <div class="field form-group">
+    
+    <%= form.text_field :date, 
+    class: "form-control",
+    placeholder:"Date" %>
+    
   </div>
 
-  <div class="field">
-    <%= form.label :advisor %>
-    <%= form.text_field :advisor %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.text_field :date %>
-  </div>
-
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :time %>
-    <%= form.time_select :time %>
+    <%= form.time_select :time, 
+    class: "form-control" %>
   </div>
 
-  <div class="actions">
+  <div class="actions form-group, 
+  class: "form-control"">
     <%= form.submit %>
   </div>
 <% end %>

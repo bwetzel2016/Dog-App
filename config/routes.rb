@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  devise_for :models
   resources :posts
   #get 'home/index'
   get 'home/about'
