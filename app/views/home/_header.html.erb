@@ -9,19 +9,20 @@
       <li class="nav-item active">
 
     <%= link_to "Appoitments", posts_path, class: "nav-link" %>
-
-
-    <li class="nav-item">
-        <a class="nav-link" href="#">About the team</a>
-
-      
-        </li>
-      
+    </li>
+       
       <li class="nav-item">
-        <a class="nav-link" href="#">Github</a>
+      <%= link_to "About Us", home_about_path, class: "nav-link" %>
       </li>
-        </div>
-      </li>
+   
+    <li class="nav-item">
+        <%= link_to 'Github', 'https://github.com/bwetzel2016/Dog-App',
+    class: "nav-link" %>
+    
+    </li>
+      
+        
+      
     </ul>
   </div>
 </nav>
