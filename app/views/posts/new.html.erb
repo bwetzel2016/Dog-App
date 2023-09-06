@@ -1,5 +1,9 @@
-<h1>New Post</h1> <br/>
+<div class="card">
+	<div class="card-header">
+		New Post
+	</div>
+	<%= render 'form', post: @post %>
 
-<%= render 'form', post: @post %>
-
-<%= link_to 'Back', posts_path %>
+<div class="btn-group">
+<%= link_to 'Back', posts_path, class: 'btn btn-secondary' %>
+</div>
