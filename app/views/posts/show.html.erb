@@ -1,39 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<div class="card">
+  <div class="card-header">
+    Details
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><p>
   <strong>First name:</strong>
   <%= @post.first_name %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Last name:</strong>
   <%= @post.last_name %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Znumber:</strong>
   <%= @post.znumber %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Email:</strong>
   <%= @post.email %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Advisor:</strong>
   <%= @post.advisor %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Date:</strong>
   <%= @post.date %>
-</p>
-
-<p>
+  </p></li>
+  <li class="list-group-item"><p>
   <strong>Time:</strong>
-  <%= @post.time %>
-</p>
+  <%= @post.time&.strftime('%I:%M %p') %>
+  </p>
 
 <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-dark" %> 
 <%= link_to 'Back', posts_path, class:"btn btn-dark" %>
