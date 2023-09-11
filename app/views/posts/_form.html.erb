@@ -13,7 +13,7 @@
 
   <div class="field form-group">
     
-    <%= form.text_field :first_name, 
+    <%= form.text_field :first_name, required: true, pattern: "[A-Za-z]+", 
     class: "form-control", 
     placeholder:"First Name"%>
     
@@ -21,7 +21,7 @@
 
   <div class="field form-group">
     
-    <%= form.text_field :last_name, 
+    <%= form.text_field :last_name, required: true, pattern: "[A-Za-z]+", 
     class: "form-control",
     placeholder:"Last Name" %>
     
@@ -29,28 +29,27 @@
 
   <div class="field form-group">
     
-    <%= form.text_field :znumber, 
+    <%= form.text_field :znumber, required: true, pattern: "Z[0-9]{8}", 
     class: "form-control", 
-    placeholder:"Znumber" %>
+    placeholder:"Z number" %>
     
   </div>
 
 
   <div class="field form-group">
-  <%= form.text_field :email, class: "form-control", placeholder: "Email" %>
+  <%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", class: "form-control", placeholder: "Email" %>
   <small class="form-text text-muted">We will never share your email with anyone else.</small>
   
   
 </div>
 
 <div class="field form-group">
-  <%= form.text_field :advisor, 
-  class: "form-control", 
-  placeholder: "Advisor" %>
+  <%= form.label :advisor %>
+  <%= form.select :advisor, ["Professor", "Mr", "Mrs", "Doctor"], prompt: "Select an option", required: true %>
   
   
 </div>
-
+</br>
 
   <div class="field form-group">
     
@@ -61,14 +60,15 @@
   </div>
 
   <div class="field form-group">
-    <%= form.label :time %>
-    <%= form.time_select :time, 
-    class: "form-control" %>
+    <small class="form-text text-muted">Appointments are from 9am to 6pm</small>
+    
+    <input type="time" <%= form.text_field :time, min: "09:00", max:"18:00" %>
+    <span class="validity"></span>
   </div>
 
-  <div class="actions form-group, 
-  class="form-control">
-  
+  <div class="actions form-group">
+    </br>
     <%= form.submit "Submit", class:"btn btn-dark" %>
   </div>
+</br>
 <% end %>
