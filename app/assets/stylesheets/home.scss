@@ -11,6 +11,11 @@
   margin-top: -20rem;
 }
 
+.edit-and-back-button {
+	display: flex;
+	gap: 1rem;
+}
+
 .row {                                                                                                       
                 display: grid;                                                                                       
                 grid-template-columns: repeat(3, 1fr);                                                               

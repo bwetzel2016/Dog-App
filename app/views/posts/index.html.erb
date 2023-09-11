@@ -30,9 +30,9 @@
         <td><%= post.advisor %></td>
         <td><%= post.date %></td>
         <td><%= post.time&.strftime('%I:%M %p') %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post, class: "btn btn-dark" %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-dark" %></td>
+        <td><%= link_to 'Destroy', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
