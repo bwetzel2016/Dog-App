@@ -61,8 +61,8 @@
 
   <div class="field form-group">
     <small class="form-text text-muted">Appointments are from 9am to 6pm</small>
-    
-    <input type="time" <%= form.text_field :time, min: "09:00", max:"18:00" %>
+    </br>
+    <%= form.time_select :time, { class: "form-control", min: "09:00", max: "18:00" } %>
     <span class="validity"></span>
   </div>
 
