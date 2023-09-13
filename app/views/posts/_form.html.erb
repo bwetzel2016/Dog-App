@@ -53,9 +53,13 @@
 
   <div class="field form-group">
     
-    <%= form.text_field :date, 
-    class: "form-control",
-    placeholder:"Date" %>
+    <%= form.text_field :date, placeholder: "Select a date", 
+    data: {
+      controller: "flatpickr",
+      flatpickr_alt_format: t("date.formats.long"),
+      flatpickr_date_format: "%B %d %Y",
+      flatpickr_min_date: Time.zone.now,
+    } %>
     
   </div>
 
