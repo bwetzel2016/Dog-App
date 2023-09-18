@@ -14,6 +14,17 @@
 
 		<div class="row">
 			<div class="col-1-of-3">
+			<button id="execute-js-button" class="btn btn-dark">GO!!</button>   
+			<script>                                                                                                             
+  			document.getElementById('execute-js-button').addEventListener('click', function() {                                
+   			 var xhr = new XMLHttpRequest();                                                                                  
+    		xhr.open('GET', '/execute_js');                                                                                  
+    		xhr.onload = function() {                                                                                        
+      		alert(xhr.responseText);                                                                                       
+    		}                                                                                                                
+    		xhr.send();                                                                                                      
+  			});                                                                                                                
+			</script>
 				<div class="card">
 					<div class="card__side card__side--front">
 						<div class="card__picture card__picture--1">
@@ -27,6 +38,7 @@
 								<li class="list-group-item">High Level Control</li>
 								<li class="list-group-item">Strong Leg Joints</li>
 								<li class="list-group-item">Dynamic Balancing </li>
+								
 							</ul>
 						</div>
 					</div>
@@ -52,4 +64,4 @@
 
 
 	</section>
-</html>                            
+</html>   

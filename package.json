@@ -2,6 +2,7 @@
   "name": "dogapp",
   "private": true,
   "dependencies": {
+    "@droneblocks/go1-js": "^0.1.5",
     "@popperjs/core": "^2.11.8",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
