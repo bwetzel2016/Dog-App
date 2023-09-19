@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   #get 'home/index'
   get 'home/about'
   root 'home#index'
-  get 'execute_js', to: 'home#execute_js'
+  get 'x_button', to: 'home#x_button'
+  get 'y_button', to: 'home#y_button'
+  get 'a_button', to: 'home#a_button'
+  get 'b_button', to: 'home#b_button'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

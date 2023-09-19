@@ -6,9 +6,21 @@ class HomeController < ApplicationController
   def about
   end
 
-  def execute_js                                                                                                     
-    `node ./app/javascript/controllers/go.js`                                                                          
+  def x_button                                                                                                     
+    `node ./app/javascript/controllers/GO.js`                                                                          
     render plain: 'JS execution completed'                                                                           
-  end  
+  end 
+  def y_button                                                                                                     
+    `node ./app/javascript/controllers/LEDS.js`
+    render plain: 'JS execution completed'                                                                                                                                                    
+  end
+  def a_button
+    `node ./app/javascript/controllers/DANCE.js`
+    render plain: 'JS execution completed'
+  end
+  def b_button
+    `node ./app/javascript/controllers/BEG.js`
+    render plain: 'JS execution completed'
+  end
 
 end

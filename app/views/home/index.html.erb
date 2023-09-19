@@ -58,25 +58,88 @@
 	<section class="section-dog">
 		<div class="row">
 			<div class="col-1-of-3">
-				<button id="execute-js-button" class="btn btn-dark">GO!!</button>
-				<script>
-					document.getElementById('execute-js-button').addEventListener('click', function() {                          
-					                                                                                                                     
-					        var xhr = new XMLHttpRequest();                                                                              
-					                                                                                                                     
-					        xhr.open('GET', '/execute_js');                                                                              
-					                                                                                                                     
-					        xhr.onload = function() {                                                                                    
-					                                                                                                                     
-					            alert(xhr.responseText);                                                                                 
-					                                                                                                                     
-					        }                                                                                                            
-					                                                                                                                     
-					        xhr.send();                                                                                                  
-					                                                                                                                     
-					        });
-				</script>
-			</div>
+				<div class="controller">
+					<div class="button y">
+						<button id="execute-y-button" class="btn btn-dark">Y</button>
+						<script>
+							document.getElementById('execute-y-button').addEventListener('click', function() {                          
+							                                                                                                                     
+							        var xhr = new XMLHttpRequest();                                                                              
+							                                                                                                                     
+							        xhr.open('GET', '/y_button');                                                                              
+							                                                                                                                     
+							        xhr.onload = function() {                                                                                    
+							                                                                                                                     
+							            alert(xhr.responseText);                                                                                 
+							                                                                                                                     
+							        }                                                                                                            
+							                                                                                                                     
+							        xhr.send();                                                                                                  
+							                                                                                                                     
+							        });
+						</script>
+					</div>
+					<div class="button x">
+						<button id="execute-x-button" class="btn btn-dark">X</button>
+						<script>
+							document.getElementById('execute-x-button').addEventListener('click', function() {                          
+							                                                                                                                     
+							        var xhr = new XMLHttpRequest();                                                                              
+							                                                                                                                     
+							        xhr.open('GET', '/x_button');                                                                              
+							                                                                                                                     
+							        xhr.onload = function() {                                                                                    
+							                                                                                                                     
+							            alert(xhr.responseText);                                                                                 
+							                                                                                                                     
+							        }                                                                                                            
+							                                                                                                                     
+							        xhr.send();                                                                                                  
+							                                                                                                                     
+							        });
+						</script>
+					</div>
+					<div class="button a">
+						<button id="execute-a-button" class="btn btn-dark">A</button>
+						<script>
+							document.getElementById('execute-a-button').addEventListener('click', function() {                          
+							                                                                                                                     
+							        var xhr = new XMLHttpRequest();                                                                              
+							                                                                                                                     
+							        xhr.open('GET', '/a_button');                                                                              
+							                                                                                                                     
+							        xhr.onload = function() {                                                                                    
+							                                                                                                                     
+							            alert(xhr.responseText);                                                                                 
+							                                                                                                                     
+							        }                                                                                                            
+							                                                                                                                     
+							        xhr.send();                                                                                                  
+							                                                                                                                     
+							        });
+						</script>
+					</div>
+					<div class="button b">
+						<button id="execute-b-button" class="btn btn-dark">B</button>
+						<script>
+							document.getElementById('execute-b-button').addEventListener('click', function() {                          
+							                                                                                                                     
+							        var xhr = new XMLHttpRequest();                                                                              
+							                                                                                                                     
+							        xhr.open('GET', '/b_button');                                                                              
+							                                                                                                                     
+							        xhr.onload = function() {                                                                                    
+							                                                                                                                     
+							            alert(xhr.responseText);                                                                                 
+							                                                                                                                     
+							        }                                                                                                            
+							                                                                                                                     
+							        xhr.send();                                                                                                  
+							                                                                                                                     
+							        });
+						</script>
+					</div>
+				</div>
 		</div>
 	</section>                                                                                                                                                                                                 
 </html>   
