@@ -7,20 +7,17 @@ class HomeController < ApplicationController
   end
 
   def x_button                                                                                                     
-    `node ./app/javascript/controllers/GO.js`                                                                          
-    render plain: 'JS execution completed'                                                                           
+    system('timeout 30 node ./app/javascript/controllers/GO.js')                                                                           
   end 
   def y_button                                                                                                     
-    `node ./app/javascript/controllers/LEDS.js`
-    render plain: 'JS execution completed'                                                                                                                                                    
+    system('timeout 1 node ./app/javascript/controllers/LEDS.js')                                                                                                                                                    
   end
   def a_button
-    `node ./app/javascript/controllers/DANCE.js`
-    render plain: 'JS execution completed'
+    system('timeout 20 node ./app/javascript/controllers/DANCE.js')
+    
   end
   def b_button
-    `node ./app/javascript/controllers/BEG.js`
-    render plain: 'JS execution completed'
+    system('timeout 10 node ./app/javascript/controllers/BEG.js')
   end
 
 end
