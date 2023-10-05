@@ -36,6 +36,25 @@
   </div>
 
 
+
+
+
+
+  <div class="field form-group">
+    
+  <%= form.number_field :user_id, 
+  id: :post_user_id, 
+  class: "form-control", value: current_user.id, type: :hidden %> 
+  
+</div>
+  
+
+
+
+
+
+
+
   <div class="field form-group">
   <%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", class: "form-control", placeholder: "Email" %>
   <small class="form-text text-muted">We will never share your email with anyone else.</small>

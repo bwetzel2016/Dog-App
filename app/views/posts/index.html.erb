@@ -9,6 +9,7 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Znumber</th>
+      <th>User ID</th>
       <th>Email</th>
       <th>Advisor</th>
       <th>Date</th>
@@ -26,15 +27,23 @@
         <td><%= post.first_name %></td>
         <td><%= post.last_name %></td>
         <td><%= post.znumber %></td>
+        <td><%= post.user_id %></td>
         <td><%= post.email %></td>
         <td><%= post.advisor %></td>
         <td><%= post.date %></td>
         <td><%= post.time&.strftime('%I:%M %p') %></td>
         <td><%= link_to 'Show', post, class: "btn btn-dark" %></td>
-        <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-dark" %></td>
-        <td><%= link_to 'Destroy', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <% if post.user == current_user %> 
+          <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-dark" %></td>
+          <td><%= link_to 'Destroy', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+        <td></td>
+        <td></td>
+        <% end %>
       </tr>
     <% end %>
+    
   </tbody>
 </table>
 
