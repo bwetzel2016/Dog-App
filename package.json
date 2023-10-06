@@ -12,6 +12,7 @@
     "flatpickr": "^4.6.13",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
+    "ssh2": "^1.14.0",
     "stimulus": "^3.2.2",
     "stimulus-flatpickr": "^1.4.0",
     "turbolinks": "^5.2.0"
