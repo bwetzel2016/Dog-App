@@ -8,10 +8,10 @@ class myClient {
 	async connect() {
 		this.conn.on('ready', () => {
 			console.log('Client :: ready');
-			this.conn.exec('uname -a', (err, stream) => {
+			this.conn.exec('python3 --version', (err, stream) => {
 				if (err) throw err;
-				stream.on('close', (code, signal) => {
-					console.log('Stream :: close :: code: ' + code + ', signal: ' + signal);
+				stream.on('close', (code) => {
+					console.log('Stream :: close :: code: ' + code);
 					this.conn.end();
 				}).on('data', (data) => {
 					console.log('STDOUT: ' + data);
@@ -20,10 +20,10 @@ class myClient {
 				});
 			});
 		}).connect({
-			host: '10.0.0.107',
+			host: '192.168.123.15',
 			port: 22,
-			username: 'robot',
-			password: 'robot'
+			username: 'unitree',
+			password: '123'
 		});
 	}
 }
