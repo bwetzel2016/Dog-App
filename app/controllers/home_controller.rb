@@ -22,5 +22,17 @@ class HomeController < ApplicationController
   def z_button
     system('timeout 5 node ./app/javascript/controllers/SSH.js')
   end
-
+  # this has not been tested or implemented yet
+  def u_button
+    system('timeout 5 node ./app/javascript/controllers/UP.js')
+  end
+  def d_button
+    system('timeout 5 node ./app/javascript/controllers/DOWN.js')
+  end
+  def l_button
+    system('timeout 5 node ./app/javascript/controllers/LEFT.js')
+  end
+  def r_button
+    system('timeout 5 node ./app/javascript/controllers/RIGHT.js')
+  end
 end

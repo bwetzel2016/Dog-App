@@ -122,6 +122,17 @@
 .controller {
   width: 300px;
   height: 150px;
+  background-color: #5643FA;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.controller-launch {
+  width: 300px;
+  height: 150px;
   background-color: #FFFFFF;
   border-radius: 10px;
   position: relative;
@@ -143,25 +154,45 @@
 
 .y {
   top: 5px;
-  left: 125px;
+  left: 52.5px;
 }
 
 .x {
   top: 45px;
-  left: 77px;
+  left: 5px;
 }
 
 .a {
   top: 45px;
-  left: 170px;
+  left: 100px;
 }
 
 .b {
   top: 85px;
-  left: 125px;
+  left: 52.5px;
 }
 
 .z {
   top: 5px;
   left: 125px;
-}                             
+}
+
+.l {
+  top: 45px;
+  left: 155px;
+}
+
+.r {
+  top: 45px;
+  left: 250px;
+}
+
+.u {
+  top: 5px;
+  left: 202.5px; 
+}
+
+.d {
+  top: 85px;
+  left: 202.5px;
+}                
