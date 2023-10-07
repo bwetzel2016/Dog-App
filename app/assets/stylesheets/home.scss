@@ -20,6 +20,15 @@
   margin-top: -10rem;
 }
 
+.section-dog-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25rem 0 20rem 0;
+  margin-top: -45rem;
+}
+
 .edit-and-back-button {
 	display: flex;
 	gap: 1rem;
@@ -85,22 +94,6 @@
         		background-image: linear-gradient(to right bottom, #2998FF, #5643FA), url(./76.jpeg);
         	}
 
-        	&--3 {
-        		background-image: linear-gradient(to right bottom, #FFF, #56DFFF), url(./77.png);
-        	}
-
-        	&--4 {
-        		background-image: linear-gradient(to right bottom, #FFF, #56DFFF), url(./78.png);
-        	}
-
-        	&--5 {
-						background-image: linear-gradient(to right bottom, #2998FF, #5643FA), url(./79.jpeg);
-					}
-
-					&--6 {
-        		background-image: linear-gradient(to right bottom, #2998FF, #5643FA), url(./80.jpeg);
-        	}
-
         }
 
 		&__heading {
@@ -150,20 +143,25 @@
 
 .y {
   top: 5px;
-  left: 70px;
+  left: 125px;
 }
 
 .x {
   top: 45px;
-  left: 30px;
+  left: 77px;
 }
 
 .a {
   top: 45px;
-  left: 110px;
+  left: 170px;
 }
 
 .b {
   top: 85px;
-  left: 70px;
-}                              
+  left: 125px;
+}
+
+.z {
+  top: 5px;
+  left: 125px;
+}                             

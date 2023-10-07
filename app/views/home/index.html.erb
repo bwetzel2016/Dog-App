@@ -56,6 +56,11 @@
 
 	</section>
 	<section class="section-dog-2">
+		<div class="u-center-text u-margin-bottom-big">
+			<h2 class="heading-secondary">
+				Control Pad
+			</h2>
+		</div>
 		<div class="row">
 			<div class="col-1-of-3">
 				<div class="controller">
@@ -109,5 +114,26 @@
 					</div>
 				</div>
 		</div>
+	</section>
+	<section class="section-dog-3">
+		<div class="row">
+			<div class="col-1-of-3">
+				<div class="controller">
+					<div class="button z">
+						<button id="execute-z-button" class="btn btn-dark">Launch</button>
+						<script>
+							document.getElementById("execute-z-button").addEventListener("click", function () {
+							    var xhr = new XMLHttpRequest();
+
+							    xhr.open("GET", "/z_button", true);
+
+							    xhr.send();
+							  });
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</section>                                                                                                                                                                                                 
 </html>   

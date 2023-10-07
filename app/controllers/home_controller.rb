@@ -19,5 +19,8 @@ class HomeController < ApplicationController
   def b_button
     system('timeout 10 node ./app/javascript/controllers/BEG.js')
   end
+  def z_button
+    system('timeout 5 node ./app/javascript/controllers/SSH.js')
+  end
 
 end
