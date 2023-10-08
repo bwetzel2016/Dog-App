@@ -120,15 +120,16 @@
                                                                                      
 }  
 .controller {
-  width: 300px;
-  height: 150px;
-  background-color: #5643FA;
-  border-radius: 10px;
+  width: 450px;
+  height: 250px;
+  background-color: #8f8f8f;
+  border-radius: 34%;
   position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 
 .controller-launch {
   width: 300px;
@@ -152,47 +153,69 @@
   position: absolute;
 }
 
+.y, .x, .a, .b {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.l, .r, .u, .d {
+  width: 50px;
+  height: 50px;
+  background-color: #000000;
+  border-radius: 100%;
+  position: absolute;
+}
+
+
 .y {
-  top: 5px;
-  left: 52.5px;
+  top: 47.5px;
+  left: 67.5px;
 }
 
 .x {
-  top: 45px;
-  left: 5px;
+  top: 95px;
+  left: 20px;
 }
 
 .a {
-  top: 45px;
-  left: 100px;
+  top: 95px;
+  left: 115px;
 }
 
 .b {
+  top: 142.5px;
+  left: 67.5px;
+}
+
+.l {
+  top: 95px;
+  left: 285px;
+}
+
+.r {
+  top: 95px;
+  left: 380px;
+}
+
+.u {
+  top: 47.5px;
+  left: 330px; 
+}
+
+.d {
+  top: 142.5px;
+  left: 330px;
+}
+
+.z {
   top: 85px;
   left: 52.5px;
 }
 
-.z {
-  top: 5px;
-  left: 125px;
-}
-
-.l {
-  top: 45px;
-  left: 155px;
-}
-
-.r {
-  top: 45px;
-  left: 250px;
-}
-
-.u {
-  top: 5px;
-  left: 202.5px; 
-}
-
-.d {
+.c {
   top: 85px;
   left: 202.5px;
-}                
+}               

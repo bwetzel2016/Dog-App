@@ -178,6 +178,19 @@
 							  });
 						</script>
 					</div>
+					<div class="button c">
+						<button id="execute-c-button" class="btn btn-dark">Cancel</button>
+						<script>
+							document.getElementById("execute-c-button").addEventListener("click", function () {
+							    var xhr = new XMLHttpRequest();
+
+							    xhr.open("GET", "/c_button", true);
+
+							    xhr.send();
+							  });
+						</script>
+					</div>
+					</div>
 				</div>
 			</div>
 		</div>
