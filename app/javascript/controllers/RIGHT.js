@@ -1,0 +1,1 @@
+console.log("RIGHT button has been pressed");
