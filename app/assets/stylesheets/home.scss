@@ -133,7 +133,7 @@
 .button {
   width: 40px;
   height: 40px;
-  border-radius: 30%;
+  border-radius: 50%;
   background-color: #8f8f8f;
   display: flex;
   justify-content: center;
@@ -178,7 +178,7 @@
   width: 50px;
   height: 50px;
   background-color: #8f8f8f;
-  border-radius: 30%;
+  border-radius: 50%;
   position: absolute;
 }
 
@@ -188,7 +188,7 @@ button#execute-z-button.btn.btn-danger
   font-size: 8px;
 }
 
-button#execute-c-button.btn.btn-danger 
+button#execute-c-button.triangle-button
 {
 
   font-size: 8px;
@@ -243,5 +243,35 @@ button#execute-c-button.btn.btn-danger
 
 .c {
   top: 140px;
-  left: 232.5px;
+  left: 245.5px;
 }               
+
+
+.btn.btn-success, .btn.btn-info, .btn.btn-primary {
+  color: black;
+}
+
+
+
+
+
+
+  
+    .triangle-button {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 18px 18px 18px 45.6px; 
+      border-color: transparent transparent transparent #333333; 
+      background-color: #8f8f8f;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .button-text {
+      position: absolute;
+      top: 50%;
+      left: 11%;
+      transform: translate(-50%, -50%);
+      color: white; 
+    }
