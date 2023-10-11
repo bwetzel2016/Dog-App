@@ -1,204 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+
+<head>
 	<title>Receptionist Robot Dog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	</head>
-	<section class="section-dog">
-		<div class="u-center-text u-margin-bottom-big">
-			<h2 class="heading-secondary">
-				Autonomous Receptionist Robot Dog
-			</h2>
-		</div>
+</head>
+<section class="section-dog">
+	<div class="u-center-text u-margin-bottom-big">
+		<h2 class="heading-secondary">
+			Autonomous Receptionist Robot Dog
+		</h2>
+	</div>
 
-		<div class="row">
-			<div class="col-1-of-3">
-				<div class="card">
-					<div class="card__side card__side--front">
-						<div class="card__picture card__picture--1">
-							&nbsp;
-						</div>
-						<div class="card__heading">
-							<span class="card__heading-span card__heading-span--1">Movement Subsystem</span>
-						</div>
-						<div class="card__details">
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">High Level Control</li>
-								<li class="list-group-item">Strong Leg Joints</li>
-								<li class="list-group-item">Dynamic Balancing </li>
-								
-							</ul>
-						</div>
+	<div class="row">
+		<div class="col-1-of-3">
+			<div class="card">
+				<div class="card__side card__side--front">
+					<div class="card__picture card__picture--1">
+						&nbsp;
 					</div>
-					<div class="card__side card__side--back">
-						<div class="card__picture card__picture--2">
-							&nbsp;
-						</div>
-						<div class="card__heading">
-							More details
-						</div>
-						<div class="card__details">
-							<ul class="list-group list-group-flush">
-								<li class="list-group-item">An open source robot with programmability in JavaScript or Python.</li>
-								<li class="list-group-item">The robot has strong leg joints that provide a stable foundation. It has tested holding over 50 lbs.</li>
-							</ul>
-						</div>
+					<div class="card__heading">
+						<span class="card__heading-span card__heading-span--1">Movement Subsystem</span>
+					</div>
+					<div class="card__details">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">High Level Control</li>
+							<li class="list-group-item">Strong Leg Joints</li>
+							<li class="list-group-item">Dynamic Balancing </li>
+
+						</ul>
 					</div>
 				</div>
-			</div>                                                                                               
-			                                                                                                               
-			</div> 
-			
-			
-		</div>
-
-
-	</section>
-	<section class="section-dog-2">
-		<div class="u-center-text u-margin-bottom-big">
-			<h2 class="heading-secondary">
-				Control Pad
-			</h2>
-		</div>
-		<div class="row">
-			<div class="col-1-of-3">
-				<div class="controller">
-					<div class="button y">
-						<button id="execute-y-button" class="btn btn-dark">Y</button>
-						<script>
-							document.getElementById("execute-y-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/y_button", true);
-
-							    xhr.send();
-							  });
-						</script>
+				<div class="card__side card__side--back">
+					<div class="card__picture card__picture--2">
+						&nbsp;
 					</div>
-					<div class="button x">
-						<button id="execute-x-button" class="btn btn-dark">X</button>
-						<script>
-							document.getElementById("execute-x-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/x_button", true);
-
-							    xhr.send();
-							  });
-						</script>
+					<div class="card__heading">
+						More details
 					</div>
-					<div class="button a">
-						<button id="execute-a-button" class="btn btn-dark">A</button>
-						<script>
-							document.getElementById("execute-a-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/a_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-					<div class="button b">
-						<button id="execute-b-button" class="btn btn-dark">B</button>
-						<script>
-							document.getElementById("execute-b-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/b_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-					<div class="button l">
-						<button id="execute-l-button" class="btn btn-primary">♢</button>
-						<script>
-							document.getElementById("execute-l-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/l_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-					<div class="button r">
-						<button id="execute-r-button" class="btn btn-info">♤</button>
-						<script>
-							document.getElementById("execute-r-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/r_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-					<div class="button u">
-						<button id="execute-u-button" class="btn btn-warning">☆</button>
-						<script>
-							document.getElementById("execute-u-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/u_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-					<div class="button d">
-						<button id="execute-d-button" class="btn btn-success">♧</button>
-						<script>
-							document.getElementById("execute-d-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/d_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-			
-			
-					
-					<div class="button z">
-						<button id="execute-z-button" class="btn btn-danger" >Launch</button>
-						<script>
-							document.getElementById("execute-z-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/z_button", true);
-
-							    xhr.send();
-							  });
-							
-						</script>
-					</div>
-			
-			
-					<div class="button c">
-						<button id="execute-c-button" class="triangle-button">
-						<div class="button-text">Cancel</button>
-						<script>
-							document.getElementById("execute-c-button").addEventListener("click", function () {
-							    var xhr = new XMLHttpRequest();
-
-							    xhr.open("GET", "/c_button", true);
-
-							    xhr.send();
-							  });
-						</script>
-					</div>
-			
-			
-			
-	
+					<div class="card__details">
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">An open source robot with programmability in JavaScript or
+								Python.</li>
+							<li class="list-group-item">The robot has strong leg joints that provide a stable
+								foundation. It has tested holding over 50 lbs.</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-	</section>                                                                                                                                                                                                 
-</html>   
+
+	</div>
+
+
+	</div>
+
+
+</section>
+<section class="section-dog-2">
+	<div class="u-center-text u-margin-bottom-big">
+		<h2 class="heading-secondary">
+			Control Pad
+		</h2>
+	</div>
+	<div class="row">
+		<div class="col-1-of-3">
+			<div class="controller">
+				<div class="button y">
+					<button id="execute-y-button" class="btn btn-dark">Y</button>
+					<script>
+						document.getElementById("execute-y-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/y_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button x">
+					<button id="execute-x-button" class="btn btn-dark">X</button>
+					<script>
+						document.getElementById("execute-x-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/x_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button a">
+					<button id="execute-a-button" class="btn btn-dark">A</button>
+					<script>
+						document.getElementById("execute-a-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/a_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button b">
+					<button id="execute-b-button" class="btn btn-dark">B</button>
+					<script>
+						document.getElementById("execute-b-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/b_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button l">
+					<button id="execute-l-button" class="btn btn-primary">♢</button>
+					<script>
+						document.getElementById("execute-l-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/l_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button r">
+					<button id="execute-r-button" class="btn btn-info">♤</button>
+					<script>
+						document.getElementById("execute-r-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/r_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button u">
+					<button id="execute-u-button" class="btn btn-warning">☆</button>
+					<script>
+						document.getElementById("execute-u-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/u_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+				<div class="button d">
+					<button id="execute-d-button" class="btn btn-success">♧</button>
+					<script>
+						document.getElementById("execute-d-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/d_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+
+
+
+				<div class="button z">
+					<button id="execute-z-button" class="btn btn-danger">Launch</button>
+					<script>
+						document.getElementById("execute-z-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/z_button", true);
+
+							xhr.send();
+						});
+
+					</script>
+				</div>
+
+
+				<div class="button c">
+					<button id="execute-c-button" class="triangle-button">
+						<div class="button-text">Cancel
+					</button>
+					<script>
+						document.getElementById("execute-c-button").addEventListener("click", function() {
+							var xhr = new XMLHttpRequest();
+
+							xhr.open("GET", "/c_button", true);
+
+							xhr.send();
+						});
+					</script>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+</section>
+
+</html>
