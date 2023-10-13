@@ -32,7 +32,7 @@ class HomeController < ApplicationController
   end
   # this has not been tested or implemented yet
   def u_button
-    system('timeout 5 node ./app/javascript/controllers/UP.js')
+    system('timeout 10 node ./app/javascript/controllers/UP.js')
   end
   def d_button
     system('timeout 5 node ./app/javascript/controllers/DOWN.js')
