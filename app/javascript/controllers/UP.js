@@ -18,7 +18,7 @@ class myClient {
 		for (let i = 0; i < 2; i++) {
 			await this.robotDog.wait(1000);
 			this.robotDog.setMode(Go1Mode.stand);
-			await this.robotDog.lookUp(FAST_SPEED, 1000);
+			await this.robotDog.lookUp(FAST_SPEED, 5000);
 		}
 
 		
@@ -29,7 +29,7 @@ class myClient {
 			// Connection successful
 			console.log('Connected successfully!');
 
-			this.conn.exec('python3 /home/unitree/audio.py', (err, stream) => {
+			this.conn.exec('python3 /home/unitree/UP_button.py', (err, stream) => {
 				if (err) throw err;
 				stream.on('close', (code) => {
 					console.log('Stream :: close :: code: ' + code);
