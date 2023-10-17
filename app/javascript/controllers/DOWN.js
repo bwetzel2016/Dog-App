@@ -1,4 +1,6 @@
 const { Go1, Go1Mode } = require("@droneblocks/go1-js");
+const { Client } = require('ssh2');
+
 
 class myClient {																																		   
 	constructor() {                                                                                                                                          
@@ -13,11 +15,11 @@ class myClient {
 		const FAST_SPEED = 0.90000000000000000;
 		
 		//LOOK DOWN
-		await this.robotDog.wait(5000);
+		
 		for (let i = 0; i < 2; i++) {
 			await this.robotDog.wait(1000);
 			this.robotDog.setMode(Go1Mode.stand);
-			await this.robotDog.lookDown(FAST_SPEED, 100);
+			await this.robotDog.lookDown(FAST_SPEED, 5000);
 		}	
 	}
 }
