@@ -9,7 +9,7 @@ class myClient {
 		this.conn = new Client();                                                                                                                            
 	}
 
-    async onMessage() {
+	async onMessage() {
 		//WALKING
 		const SLOW_SPEED = 0.10000000000000000;
 		const MED_SPEED = 0.50000000000000000;
@@ -19,19 +19,14 @@ class myClient {
     
         
     
-    for (let i = 0; i < 2; i++) {
-        await this.robotDog.wait(1000);
-        this.robotDog.setMode(Go1Mode.stand);
-        await this.robotDog.twistRight(MED_SPEED, 100);
-    }
+		for (let i = 0; i < 2; i++) {
+			await this.robotDog.wait(1000);
+			this.robotDog.setMode(Go1Mode.stand);
+			await this.robotDog.twistRight(MED_SPEED, 100);
+		}
+	}
 
-
-
-
-
-
-}
-async connectWithRetry() {
+	async connectWithRetry() {
 		this.conn.on('ready', () => {
 			// Connection successful
 			console.log('Connected successfully!');
@@ -66,7 +61,7 @@ async connectWithRetry() {
 			username: 'unitree',
 			password: '123',
 		});
-    }
+	}
 }
 
 const client = new myClient();
