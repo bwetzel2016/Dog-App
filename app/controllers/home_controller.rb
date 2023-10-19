@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   end
   # LED mode
   def y_button                                                                                                     
-    system('timeout 1 node ./app/javascript/controllers/Y_button.js')                                                                                                                                                    
+    system('timeout 3 node ./app/javascript/controllers/Y_button.js')                                                                                                                                                    
   end
   # Dance mode
   def a_button
