@@ -22,7 +22,7 @@ class myClient {
 		for (let i = 0; i < 2; i++) {
 			await this.robotDog.wait(1000);
 			this.robotDog.setMode(Go1Mode.stand);
-			await this.robotDog.twistRight(MED_SPEED, 100);
+			await this.robotDog.twistRight(MED_SPEED, 5000);
 		}
 	}
 
