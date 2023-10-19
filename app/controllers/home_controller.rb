@@ -30,16 +30,20 @@ class HomeController < ApplicationController
   def c_button
     system('timeout 5 node ./app/javascript/controllers/C_button.js')
   end
-  # this has not been tested or implemented yet
+  
+  #look up button
   def u_button
     system('timeout 10 node ./app/javascript/controllers/UP.js')
   end
+  #look down button
   def d_button
     system('timeout 5 node ./app/javascript/controllers/DOWN.js')
   end
+  #twist left button
   def l_button
     system('timeout 5 node ./app/javascript/controllers/LEFT.js')
   end
+  #twist right button
   def r_button
     system('timeout 5 node ./app/javascript/controllers/RIGHT.js')
   end
