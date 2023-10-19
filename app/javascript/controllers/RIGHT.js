@@ -31,7 +31,7 @@ class myClient {
 			// Connection successful
 			console.log('Connected successfully!');
 
-			this.conn.exec('python3 /home/unitree/LEFT_button.py', (err, stream) => {
+			this.conn.exec('python3 /home/unitree/talk/RIGHT.py', (err, stream) => {
 				if (err) throw err;
 				stream.on('close', (code) => {
 					console.log('Stream :: close :: code: ' + code);
