@@ -6,8 +6,13 @@ function connectWithRetry() {
 	conn.on('ready', () => {
 		// Connection successful, do whatever you want
 		console.log('Connected successfully!');
-		// Your code here...
-		conn.exec('cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3', (err, stream) => {
+		// TO EXECUTE INDIVIDUAL PATROLS
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol1.sh
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol2
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3
+		// TO EXECUTE THE NAV MAP PYTHON SCRIPT
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 python3 nav_map.py
+		conn.exec('cd /home/unitree/UnitreeSLAM/ && timeout 150 python3 nav_map.py', (err, stream) => {
 			if (err) throw err;
 			stream.on('close', (code) => {
 				console.log('Stream :: close :: code: ' + code);
