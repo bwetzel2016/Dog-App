@@ -7,7 +7,7 @@ function connectWithRetry() {
 		// Connection successful, do whatever you want
 		console.log('Connected successfully!');
 		// Your code here...
-		conn.exec('python3 --version', (err, stream) => {
+		conn.exec('cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3', (err, stream) => {
 			if (err) throw err;
 			stream.on('close', (code) => {
 				console.log('Stream :: close :: code: ' + code);
