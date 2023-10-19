@@ -5,7 +5,8 @@ const { Client } = require('ssh2');
 class myClient {																																		   
 	constructor() {                                                                                                                                          
 		this.robotDog = new Go1();
-		this.robotDog.init();                                                                                                                             
+		this.robotDog.init();
+		this.conn = new Client();                                                                                                            
 	}
 
 	async onMessage() {
@@ -61,7 +62,6 @@ class myClient {
 	}
 }
 
-
-
-const client = new myClient;
+const client = new myClient();
 client.onMessage();
+client.connectWithRetry();	
