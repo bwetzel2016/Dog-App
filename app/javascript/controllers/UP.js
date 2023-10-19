@@ -29,7 +29,7 @@ class myClient {
 			// Connection successful
 			console.log('Connected successfully!');
 
-			this.conn.exec('python3 /home/unitree/talk/talk.py UP_button.wav', (err, stream) => {
+			this.conn.exec('python3 /home/unitree/talk/UP.py', (err, stream) => {
 				if (err) throw err;
 				stream.on('close', (code) => {
 					console.log('Stream :: close :: code: ' + code);
