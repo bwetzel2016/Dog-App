@@ -24,7 +24,7 @@ class HomeController < ApplicationController
   # launch and cancel button
   # SSH mode
   def z_button
-    system('timeout 5 node ./app/javascript/controllers/Z_button.js')
+    system('timeout 15 node ./app/javascript/controllers/Z_button.js')
   end
   # cancel button
   def c_button
