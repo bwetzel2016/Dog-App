@@ -34,7 +34,11 @@
   <li class="list-group-item"><p>
   <strong>Time:</strong>
   <%= @post.time&.strftime('%I:%M %p') %>
-  </p>
-
+  </p></li>
+  <li class="list-group-item"><p>
+  <strong>Image:</strong>
+  <%= @post.image %>
+  
+<br/>
 <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-dark" %> 
 <%= link_to 'Back', posts_path, class:"btn btn-danger" %>

@@ -50,14 +50,9 @@
   
 
 
-
-
-
-
-
-  <div class="field form-group">
-  <%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", class: "form-control", placeholder: "Email" %>
-  <small class="form-text text-muted">We will never share your email with anyone else.</small>
+<div class="field form-group">
+<%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", class: "form-control", placeholder: "Email" %>
+<small class="form-text text-muted">We will never share your email with anyone else.</small>
   
   
 </div>
@@ -82,14 +77,27 @@
     
   </div>
 
-  <div class="field form-group">
+
+  <div class="field form">
+  <% if post.image.attached? %>
+   <%= image_tag post.image, style: "width: 50px; display: block" %>
+  <% end %>
+
+  <%= form.label :image %>
+  <%= form.file_field :image, class: "form-control" %>
+</div>
+
+
+
+
+<div class="field form-group">
     <small class="form-text text-muted">Appointments are from 9am to 6pm</small>
     </br>
     <%= form.time_select :time, { class: "form-control", min: "09:00", max: "18:00" } %>
     <span class="validity"></span>
   </div>
 
-  <div class="actions form-group">
+<div class="actions form-group">
     </br>
     <%= form.submit "Submit", class:"btn btn-dark" %>
   </div>
