@@ -13,6 +13,7 @@
 
 .section-dog-2 {
   display: flex;
+  
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -36,6 +37,7 @@
 
 .card {
   perspective: 150rem;
+  background-color: #000000;
   -moz-perspective: 150rem;
   position: relative;
   height: 30rem;
@@ -60,7 +62,7 @@
     }
 
     &--back {
-
+      background-color: #963b3b;
       transform: rotateY(180deg);
 
 
@@ -70,6 +72,9 @@
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
+    
+    
+
   }
 
   &:hover &__side--back {
@@ -78,6 +83,7 @@
 
   &__picture {
     background-size: cover;
+    
     height: 18rem;
     background-blend-mode: saturation;
 
@@ -120,7 +126,7 @@
 .controller {
   width: 450px;
   height: 250px;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;
   border-radius: 34%;
   position: relative;
   display: flex;
@@ -132,13 +138,20 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
 }
 
+.heading-secondary{
+margin-top: -180px;
+margin-bottom: 0.5rem;
+font-weight: 350;
+line-height: 1.2;
+
+}
 
 
 .y,
@@ -147,7 +160,7 @@
 .b {
   width: 50px;
   height: 50px;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;
   border-radius: 100%;
   position: absolute;
 }
@@ -158,7 +171,7 @@
 .d {
   width: 50px;
   height: 50px;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;
   border-radius: 100%;
   position: absolute;
 }
@@ -168,7 +181,7 @@
 .z {
   width: 50px;
   height: 50px;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;
   border-radius: 50%;
   position: absolute;
 }
@@ -232,6 +245,7 @@ button#execute-c-button.triangle-button {
 
 .c {
   top: 140px;
+  
   left: 245.5px;
 }
 
@@ -248,7 +262,7 @@ button#execute-c-button.triangle-button {
   border-style: solid;
   border-width: 18px 18px 18px 45.6px;
   border-color: transparent transparent transparent #333333;
-  background-color: #8f8f8f;
+  background-color: #B8B1AD;;
   cursor: pointer;
   outline: none;
 }
@@ -259,4 +273,7 @@ button#execute-c-button.triangle-button {
   left: 11%;
   transform: translate(-50%, -50%);
   color: white;
+}
+.custom-background {
+  background-color: #95B9C7; /* Replace with your desired color code */
 }
