@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   get 'l_button', to: 'home#l_button'
   get 'r_button', to: 'home#r_button'
 
+
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

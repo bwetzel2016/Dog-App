@@ -59,7 +59,7 @@
 
 <div class="field form-group">
   <%= form.label :advisor %>
-  <%= form.select :advisor, ["Professor", "Mr", "Mrs", "Doctor"], prompt: "Select an option", required: true %>
+  <%= form.select :advisor, ["Alyssa", "Golden", "Jennifer", "Melissa"], prompt: "Select an option", required: true %>
   
   
 </div>
@@ -78,15 +78,10 @@
   </div>
 
 
-  <div class="field form">
-  <% if post.image.attached? %>
-   <%= image_tag post.image, style: "width: 50px; display: block" %>
-  <% end %>
-
-  <%= form.label :image %>
-  <%= form.file_field :image, class: "form-control" %>
+  <div class="field">
+  <%= form.label :"Facial Image"  %>
+  <%= form.file_field :image %>
 </div>
-
 
 
 

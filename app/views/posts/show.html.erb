@@ -31,14 +31,32 @@
   <strong>Date:</strong>
   <%= @post.date %>
   </p></li>
-  <li class="list-group-item"><p>
-  <strong>Time:</strong>
-  <%= @post.time&.strftime('%I:%M %p') %>
-  </p></li>
-  <li class="list-group-item"><p>
-  <strong>Image:</strong>
-  <%= @post.image %>
+  <li class="list-group-item">
+  <p>
+    <strong>Time:</strong>
+    <%= @post.time&.strftime('%I:%M %p') %>
   
-<br/>
-<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-dark" %> 
-<%= link_to 'Back', posts_path, class:"btn btn-danger" %>
+    <li class="list-group-item">
+    <p>
+      <strong>Time:</strong>
+      <%= @post.time&.strftime('%I:%M %p') %>
+    </p>
+  </li>
+  
+  
+  <li class="list-group-item">
+  <p>
+    <strong>Image:</strong>
+    <% if @post.image.attached? %>
+      <%= image_tag(@post.image, style:"width:100%") %>
+    <% else %>
+      No image attached
+    <% end %>
+  </p>
+</li>
+
+  <br/>
+  
+  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-dark" %> 
+  <%= link_to 'Back', posts_path, class: "btn btn-danger" %>
+  
