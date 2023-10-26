@@ -37,7 +37,6 @@
 
 .card {
   perspective: 150rem;
-  background-color: #000000;
   -moz-perspective: 150rem;
   position: relative;
   height: 30rem;
@@ -55,7 +54,7 @@
     width: 20rem;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(#000000, .15);
+    box-shadow: 0 1.5rem 4rem rgba(#95B9C7, .15);
 
     &--front {
       background-color: #fff;
