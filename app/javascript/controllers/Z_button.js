@@ -8,11 +8,11 @@ function connectWithRetry() {
 		console.log('Connected successfully!');
 		// TO EXECUTE INDIVIDUAL PATROLS
 		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol1.sh
-		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol2
-		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol2.sh
+		// cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3.sh
 		// TO EXECUTE THE NAV MAP PYTHON SCRIPT
 		// cd /home/unitree/UnitreeSLAM/ && timeout 150 python3 nav_map.py
-		conn.exec('cd /home/unitree/UnitreeSLAM/ && timeout 150 python3 nav_map.py', (err, stream) => {
+		conn.exec('cd /home/unitree/UnitreeSLAM/ && timeout 150 /bin/bash patrol3.sh', (err, stream) => {
 			if (err) throw err;
 			stream.on('close', (code) => {
 				console.log('Stream :: close :: code: ' + code);
