@@ -8,19 +8,22 @@
       <ul class="navbar-nav">
         <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Appointments", posts_path, class: "nav-link active" %>
+         <%= link_to "Appointments", posts_path, class: "nav-link active" %> 
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Appointment", new_post_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
           <%= link_to "About Us", home_about_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link active" %>
         </li>
         <li class="nav-item">
           <%= link_to "GitHub", 'https://github.com/bwetzel2016/Dog-App', class: "nav-link active" %>
         </li>
         <li class="nav-item">
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link active" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link active" %>
         </li>
         <% else %>
         <li class="nav-item">
