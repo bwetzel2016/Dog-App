@@ -15,15 +15,19 @@
           <%= post.date %>
           <%= post.time&.strftime('%I:%M %p') %>
         </h5>
-        <div class="card-body">
+        <div class="card-body d-flex align-items-center">
+          <% if post.image.attached? %>
+          <%= image_tag(post.image, class: "rounded-circle", style: "width: 74px; height: 74px;") %>
+          <% else %>
+          <%= image_tag(asset_path('DAISY.png'), style: "width: 74px; height 74px;") %>
+          <% end %>
           <ul class="list-group list-group-light list-group-small border-0">
             <div class="list-group-item px-3 border-0">Appointment with <%= post.advisor %></div>
-            <div class="list-group-item px-3 border-0">
-            </div>
+            <div class="list-group-item px-3 border-0"></div>
             <div class="col">
               <%= link_to 'Show', post, class: "btn btn-primary text-white"%>
               <% if post.user == current_user %>
-                <%= link_to 'Destroy', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Delete', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
               <% else %>
                 <div class="col"></div>
                 <div class="col"></div>
