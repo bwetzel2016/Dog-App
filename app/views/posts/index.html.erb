@@ -1,20 +1,28 @@
 <p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Receptionist Robot Dog</title>
+  <%= favicon_link_tag asset_path('favicon.ico') %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body class="custom-background">
   <div class="flex-container">
-    <div class="card">
-      <% @posts.each_with_index do |post, index| %>
-        <div class="card-header text-black">
+    <% @posts.each_with_index do |post, index| %>
+      <div class="card" style="width: 18rem;">
+        <h5 class="card-header text-black">
           <%= post.first_name %> <%= post.last_name %>
-        </div>
+        </h5>
         <div class="card-body">
-          <div class="row">
-            <div class="col"><%= post.znumber %></div>
-            <div class="col"><%= post.user_id %></div>
-            <div class="col"><%= post.advisor %></div>
-            <div class="col"><%= post.date %></div>
-            <div class="col"><%= post.time&.strftime('%I:%M %p') %></div>
+          <ul class="list-group list-group-light list-group-small">
+            <div class="list-group-item px-3"><%= post.znumber %></div>
+            <div class="list-group-item px-3"><%= post.advisor %></div>
+            <div class="list-group-item px-3"><%= post.date %>
+              <%= post.time&.strftime('%I:%M %p') %>
+            </div>
             <div class="col">
-              <%= link_to 'Show', post, class: "btn btn-dark"%>
+              <%= link_to 'Show', post, class: "btn btn-primary text-white"%>
               <% if post.user == current_user %>
                 <%= link_to 'Destroy', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
               <% else %>
@@ -22,13 +30,13 @@
                 <div class="col"></div>
               <% end %>
             </div>
-          </div>
+          </ul>
         </div>
- 
-        <% if index != @posts.length - 1 %>
-          <div style="margin-bottom: 20px;"></div>
-        <% end %>
+      </div>
+      <% if index != @posts.length - 1 %>
+        <div style="margin-bottom: 20px;"></div>
       <% end %>
-    </div>
+    <% end %>
   </div>
 </body>
+</html>
