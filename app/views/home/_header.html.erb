@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <%= link_to "Dog App", root_path, class:"navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,5 +52,46 @@
 
         
     </ul>
+=======
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+   <%= image_tag 'DAISY.png', class:"navbar-brand", style: "width: 50px; height: 50px;" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+        <li class="nav-item">
+         <%= link_to "Appointments", posts_path, class: "nav-link active" %> 
+        </li>
+        <li class="nav-item">
+          <%= link_to "New Appointment", new_post_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "About Us", home_about_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "GitHub", 'https://github.com/bwetzel2016/Dog-App', class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-link active" %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "Home", root_path, class: "nav-link active" %>
+        <li class="nav-item">
+          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign In", new_user_session_path,  class: "nav-link active" %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+>>>>>>> e77fd11a7cc56401b8592df0edce29e2c22a6848
   </div>
 </nav>
