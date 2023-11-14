@@ -10,16 +10,15 @@
 <body class="custom-background">
   <div class="flex-container">
     <% @posts.each_with_index do |post, index| %>
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 25rem;">
         <h5 class="card-header text-black">
-          <%= post.first_name %> <%= post.last_name %>
+          <%= post.date %>
+          <%= post.time&.strftime('%I:%M %p') %>
         </h5>
         <div class="card-body">
-          <ul class="list-group list-group-light list-group-small">
-            <div class="list-group-item px-3"><%= post.znumber %></div>
-            <div class="list-group-item px-3"><%= post.advisor %></div>
-            <div class="list-group-item px-3"><%= post.date %>
-              <%= post.time&.strftime('%I:%M %p') %>
+          <ul class="list-group list-group-light list-group-small border-0">
+            <div class="list-group-item px-3 border-0">Appointment with <%= post.advisor %></div>
+            <div class="list-group-item px-3 border-0">
             </div>
             <div class="col">
               <%= link_to 'Show', post, class: "btn btn-primary text-white"%>
