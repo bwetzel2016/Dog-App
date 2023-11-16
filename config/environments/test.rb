@@ -43,6 +43,10 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  
+  # config allow active storage blobs
+  config.active_storage.service_urls_expire_in = 1.year
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 

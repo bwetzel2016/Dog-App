@@ -64,6 +64,9 @@ Rails.application.configure do
 
   #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # config allow active storage blobs
+  config.active_storage.service_urls_expire_in = 1.year
+
 
 
 
