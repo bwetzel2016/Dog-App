@@ -1,6 +1,5 @@
 class AddFieldsToPosts < ActiveRecord::Migration[6.0]
   def change
-    add_column :posts, :user_id, :integer
-    add_index :posts, :user_id
+    add_column :posts, :room_number, :string
   end
 end

@@ -37,9 +37,6 @@
 
 
 
-
-
-
   <div class="field form-group">
     
   <%= form.number_field :user_id, 
@@ -62,6 +59,12 @@
   <%= form.select :advisor, ["Alyssa", "Golden", "Jennifer", "Melissa"], prompt: "Select an option", required: true %>
   
   
+</div>
+</br>
+
+<div class="field form-group">
+  <%= form.label :room_number %>
+  <%= form.select :room_number, ["201", "202", "203", "204"], prompt: "Select an option", required: true %>
 </div>
 </br>
 
