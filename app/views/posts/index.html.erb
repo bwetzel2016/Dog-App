@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +27,7 @@
               <%= link_to 'Show', post, class: "btn btn-primary text-white"%>
               <% if post.user == current_user %>
                 <%= link_to 'Delete', post, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% else %>
+                <% else %>
                 <div class="col"></div>
                 <div class="col"></div>
               <% end %>

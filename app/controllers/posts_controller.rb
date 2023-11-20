@@ -61,9 +61,10 @@ class PostsController < ApplicationController
 
   def correct_user
     @post = current_user.posts.find_by(id: params[:id])
-    redirect_to posts_path, notice: "Not Authorized to Edit This Appoitment" if @post.nil?
+    redirect_to posts_path, notice: "Not Authorized to Edit This Appointment" if @post.nil?
   end
 
+  
 
 
 

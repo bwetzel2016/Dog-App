@@ -2,7 +2,6 @@
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
         <% post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -12,7 +11,6 @@
   <% end %>
 
   <div class="field form-group">
-    
     <%= form.text_field :first_name, required: true, pattern: "[A-Za-z]+", 
     class: "form-control", 
     placeholder:"First Name"%>
