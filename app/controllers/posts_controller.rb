@@ -64,8 +64,12 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: "Not Authorized to Edit This Appointment" if @post.nil?
   end
 
+<<<<<<< HEAD
   
 
+=======
+ 
+>>>>>>> 1340e0a034324566cf19af88de9bf161e1f2a164
 
 
 
@@ -80,4 +84,3 @@ class PostsController < ApplicationController
       params.require(:post).permit(:first_name, :last_name, :znumber, :email, :advisor, :room_number, :date, :time, :user_id, :image)
     end
 end
-

@@ -18,7 +18,7 @@
     </div>
     <ul class="list-group list-group-light list-group-small border-0">
      <div class="list-group-item px-3 border-0"><%= @post.first_name %> <%= @post.last_name %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Room: <%= @post.room_number %></div>
-     <div class="list-group-item px-3 border-0"><%= @post.znumber %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; User ID: <%= @post.user_id %></div>
+     <div class="list-group-item px-3 border-0"><%= @post.znumber %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  User ID: <%= @post.user_id %></div>
     </ul>
     <div class="text-center">
       <%= link_to 'Add Photo', edit_post_path(@post), class: "btn btn-primary text-white" %>

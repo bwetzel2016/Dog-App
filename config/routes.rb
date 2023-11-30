@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'photos/index'
   devise_for :users
   devise_for :models
   resources :posts
@@ -15,9 +16,7 @@ Rails.application.routes.draw do
   get 'd_button', to: 'home#d_button'
   get 'l_button', to: 'home#l_button'
   get 'r_button', to: 'home#r_button'
-
-
-
+  get 'photos', to: 'photos#index'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
