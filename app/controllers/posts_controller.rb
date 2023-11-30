@@ -64,7 +64,7 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: "Not Authorized to Edit This Appoitment" if @post.nil?
   end
 
-
+ 
 
 
 
@@ -79,4 +79,3 @@ class PostsController < ApplicationController
       params.require(:post).permit(:first_name, :last_name, :znumber, :email, :advisor, :room_number, :date, :time, :user_id, :image)
     end
 end
-
