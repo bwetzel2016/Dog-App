@@ -9,5 +9,17 @@ User.create([
               {
                 email: 'brandon@fau.edu',
                 password: '123456'
+              },
+              {
+                email: 'caleb@fau.edu',
+                password: '123456'
+              },
+              {
+                email: 'shahima@fau.edu',
+                password: '123456'
+              },
+              {
+                email: 'endian@fau.edu',
+                password: '123456'
               }
             ])

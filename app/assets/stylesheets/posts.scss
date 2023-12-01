@@ -4,9 +4,8 @@
 
 .flex-container {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: 100vh;
-  margin-top: 40px; /* Set container height to full viewport height */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align cards to the top */
+  padding: 20px; /* Add padding between the cards */
 }
