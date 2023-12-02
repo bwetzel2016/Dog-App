@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Daisy the robot dog</title>
-    <%= favicon_link_tag asset_path("favicon.ico") %>
+
+<head>
+  <title>Daisy the robot dog</title>
+  <%= favicon_link_tag asset_path("favicon.ico") %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <%= form_with(model: post, local: true) do |form| %>
-      <% if post.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-          <ul>
-            <% post.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
+</head>
+
+<body>
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(post.errors.count, "error" ) %> prohibited this post from being saved:
+        </h2>
+        <ul>
+          <% post.errors.full_messages.each do |message| %>
+            <li>
+              <%= message %>
+            </li>
             <% end %>
-          </ul>
-        </div>
+        </ul>
+      </div>
       <% end %>
-      <div class="field form-group">
-        <%= form.text_field :first_name, required: true, pattern: "[A-Za-z]+", 
-        class: "form-control", 
-        placeholder:"First Name"%>
-      </div>
-      <div class="field form-group">
-        <%= form.text_field :last_name, required: true, pattern: "[A-Za-z]+", 
-        class: "form-control",
-        placeholder:"Last Name" %>
-      </div>
-      <div class="field form-group">
-        <%= form.text_field :znumber, required: true, pattern: "Z[0-9]{8}", 
-      class: "form-control", 
-      placeholder:"Z number" %>
-      </div>
-      <div class="field form-group">
-        <%= form.number_field :user_id, 
-      id: :post_user_id, 
-      class: "form-control", value: current_user.id, type: :hidden %>
-      </div>
-      <div class="field form-group">
-        <%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", class: "form-control", placeholder: "Email" %>
-      </div>
-      </br>
-      <div class="field form-group">
-        <%= form.label :advisor %>
-      <%= form.select :advisor, ["Alyssa", "Golden", "Jennifer", "Melissa"], prompt: "Select an option", required: true %>
-      </div>
-      </br>
-      <div class="field form-group">
-        <%= form.label :date %>
-        <%= form.text_field :date, placeholder: "Select a date", 
-        data: {
-          controller: "flatpickr",
-          flatpickr_alt_format: t("date.formats.long"),
-          flatpickr_date_format: "%B %d %Y",
-          flatpickr_min_date: Time.zone.now,
-        } %>
-    </div>
-    </br>
-    <div class="field form-group">
-      <%= form.label :"Profile Picture"  %>
-      <%= form.file_field :image %>
-      </div>
-      <div class="field form-group">
-        <small class="form-text text-muted">Appointments are from 9am to 6pm</small>
+        <div class="field form-group">
+          <%= form.text_field :first_name, required: true, pattern: "[A-Za-z]+" , class: "form-control" ,
+            placeholder:"First Name"%>
+        </div>
+        <div class="field form-group">
+          <%= form.text_field :last_name, required: true, pattern: "[A-Za-z]+" , class: "form-control" ,
+            placeholder:"Last Name" %>
+        </div>
+        <div class="field form-group">
+          <%= form.text_field :znumber, required: true, pattern: "Z[0-9]{8}" , class: "form-control" , placeholder:"Znumber" %>
+        </div>
+        <div class="field form-group">
+          <%= form.number_field :user_id, id: :post_user_id, class: "form-control" , value: current_user.id, type:
+            :hidden %>
+        </div>
+        <div class="field form-group">
+          <%= form.text_field :email, required: true, pattern: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" ,
+            class: "form-control" , placeholder: "Email" %>
+        </div>
         </br>
-        <%= form.time_select :time, { class: "form-control", min: "09:00", max: "18:00" } %>
-      <span class="validity"></span> 
-      </div>
-      <div class="actions form-group">
+        <div class="field form-group">
+          <%= form.label :advisor %>
+            <%= form.select :advisor, ["Alyssa", "Golden" , "Jennifer" , "Melissa" ], prompt: "Select an option" ,
+              required: true %>
+        </div>
         </br>
-        <%= form.submit "Check In", class:"btn btn-primary text-white" %>
-      <%= link_to "Back", posts_path, class: "btn btn-danger" %> 
-      </div>
-      </br>
-    <% end %>
-  </body>
+        <div class="field form-group">
+          <%= form.label :room_number %>
+            <%= form.select :room_number, ["201A", "202B" , "203C" , "204D" ], prompt: "Select an option" , required:
+              true %>
+        </div>
+        </br>
+        <div class="field form-group">
+          <%= form.label :"Profile Picture" %>
+            <%= form.file_field :image %>
+        </div>
+        </br>
+        <div class="field form-group">
+          <%= form.label :date %>
+            <%= form.text_field :date, placeholder: "Select a date" , data: { controller: "flatpickr" ,
+              flatpickr_alt_format: t("date.formats.long"), flatpickr_date_format: "%B %d %Y" , flatpickr_min_date:
+              Time.zone.now, } %>
+        </div>
+        </br>
+
+        <div class="field form-group">
+          <%= form.label :time %>
+            <%= form.text_field :time, placeholder: "Select a time" , data: { controller: "flatpickr" ,
+              flatpickr_alt_format: "H:i K" , flatpickr_date_format: "%H:i" , flatpickr_min_date: Time.zone.now,
+              flatpickr_enable_time: true, flatpickr_no_calendar: true, flatpickr_time_24hr: false } %>
+        </div>
+        <div class="actions form-group">
+          </br>
+          <%= form.submit "Check In" , class:"btn btn-primary text-white" %>
+            <%= link_to "Back" , posts_path, class: "btn btn-danger" %>
+        </div>
+        </br>
+        <% end %>
+</body>
+
 </html>
