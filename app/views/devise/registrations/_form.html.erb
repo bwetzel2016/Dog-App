@@ -6,6 +6,10 @@
           <div class="card">
             <div class="card-header text-center text-black">
               <h3>Edit Profile</h3>
+              <h5>
+              <%= image_tag 'DAISY.png', class: "profile-picture", style: "width: 80px; height: 80px;" %>
+              </h5>
+              <small>  <%= resource.email %></small>
               <div class="body">
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
                   <div class="actions"><br/>
