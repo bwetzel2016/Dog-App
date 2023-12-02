@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Daisy the robot dog</title>
@@ -5,18 +6,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<section class="section-dog">
 <body class="custom-background">
-  <div class="flex-container" style="padding: 0px;">
-    <div class="card" style="width: 25rem;">
-      <h5 class="card-header text-center text-black">
-        New Appointment
-      </h5>
-      <%= render "form", post: @post %> 
+  <section class="section-dog">
+    <div class="flex-container" style="padding: 0px;">
+      <div class="card" style="width: 25rem;">
+        <h5 class="card-header text-center text-black">
+          New Appointment
+        </h5>
+        <%= render "form", post: @post %> 
+      </div>
     </div>
-  </div>
+  </section>
 </body>
-</section>
 </html>
-
 
