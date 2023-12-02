@@ -1,15 +1,20 @@
-<div class="container">
-  <div class="row justify-content-center mt-5"> 
-    <div class="col-md-4"> 
-      <div class="card bg-light" style="border: 2px solid #000;"> 
-        <div class="card-header text-center">
-        <body class="custom-background" >
-		<h4>New Appointment</h4>
-	</div>
-	<%= render 'form', post: @post %>
-
-<div class="edit-and-back-button">
-<%= link_to 'Back', posts_path, class: 'btn btn-danger' %>
-</div>
+<html lang="en">
+<head>
+  <title>Daisy the robot dog</title>
+  <%= favicon_link_tag asset_path("favicon.ico") %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="custom-background">
+  <div class="flex-container">
+    <div class="card" style="width: 25rem;">
+      <h5 class="card-header text-center text-black">
+        New Appointment
+      </h5>
+      <%= render "form", post: @post %> 
+    </div>
+  </div>
+</body>
+</html>
 
 
