@@ -6,59 +6,14 @@
 <div class="container custom-background">
   <section class="section-dog">
  <body class="custom-background">
-  <div class="row"> 
-    <div class="col-md-4"> 
-      <div class="card border-0"> 
-        <div class="body text-center"> 
-          <h3>Edit Profile</h3>
-        </div>
-        <div class="body">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
-            <div class="field form-group">
-              <% f.label :email %>
-              <%= f.email_field :email, class: "form-control", placeholder:"Email" , autofocus: true, autocomplete: "email" %>
-            </div>
-            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-              <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-            <% end %>
-            <div class="field">
-              <% f.label :password %> <i>Leave blank if you don't want to change it</i><br />
-              <%= f.password_field :password, 
-              class: "form-control", 
-              placeholder:"Password" , autocomplete: "new-password" %>
-              <% if @minimum_password_length %>
-                <br />
-                <em><%= @minimum_password_length %> characters minimum</em>
-              <% end %>
-            </div>
-            <div class="field">
-              <% f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation, 
-              class: "form-control", 
-              placeholder:"Password confirmation" , autocomplete: "new-password" %>
-            </div>
-            <div class="field"><br />
-              <%= f.label :current_password %> <i></i><br />
-              <%= f.password_field :current_password, 
-              class: "form-control", 
-              placeholder:"Current password" , autocomplete: "current-password" %>
-            </div>
-            <div class="actions"><br/>
-              <%= f.submit "Update", class: 'btn btn-dark' %>
-              <%= link_to "Back", :back, class:'btn btn-dark'%>
-              <h1></h1>
-              <%= button_to "Delete my profile", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %> 
-            </br>
-            </div> 
-          <% end %>
-        </br>
-        </div>
-      </section>
-      </div>
-    </div>
-  </div>
-</div>
+  <div class="flex-container" style="padding: 0px;"> 
+       <%= render 'form' %>
+     </div>
+   </div>
+ </body>
+</section>
+</html>
+      
 
 
 
