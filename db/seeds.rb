@@ -21,5 +21,9 @@ User.create([
               {
                 email: 'endian@fau.edu',
                 password: '123456'
+              },
+              {
+                email: 'luc1234@fau.edu',
+                password: '123456'
               }
             ])
