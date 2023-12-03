@@ -6,18 +6,21 @@ This project centers around the creation of appointments for a robot dog named D
 
 ## Installation
 
-Install ASDF and Ruby 3.0.0
+Install ASDF, Ruby 3.0.0, Rails 6.0.3.3, nodeJS 14.20.0, yarn 1.22.10 
 
-```bash``` 
+```asdf install ruby 3.0.0```
+```asdf install nodejs 14.20.0```
+```asdf install yarn 1.22.10```
+```gem install rails --version 6.0.3.3```
+
 
 ## Usage
 
-start the rails server
+start the rails server and navigate to localhost:3000 in your browser to view the application.
 
-```
-rails s
-
-```
+```rails s```
+```rails db:migrate```
+```rails db:seed```
 
 
 ## Contributing
@@ -30,9 +33,6 @@ MIT License
 
 ## Project status
 
-```
 Completed
-
-```
 
 
