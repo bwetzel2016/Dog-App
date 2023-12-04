@@ -64,6 +64,26 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: "Not Authorized to Edit This Appointment" if @post.nil?
   end
 
+  def send_photo
+    text = params[:text]
+    room_number = params[:roomNumber]
+    first_name = params[:firstName]
+
+    # Create a directory if it doesn't exist
+    photos_directory = Rails.root.join('public', 'photos')
+    FileUtils.mkdir_p(photos_directory) unless File.directory?(photos_directory)
+
+    # Generate a unique filename based on room_number and first_name
+    filename = "#{first_name}#{room_number}.txt"
+    file_path = File.join(photos_directory, filename)
+
+    # Save the text to the file
+    File.write(file_path, text)
+
+    render plain: 'Data received and file saved successfully' # Replace with your response
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

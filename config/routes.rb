@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'l_button', to: 'home#l_button'
   get 'r_button', to: 'home#r_button'
   get 'photos', to: 'photos#index'
-
+  post 'photos', to: 'posts#index'
+  post '/posts/send_photo', to: 'posts#send_photo'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

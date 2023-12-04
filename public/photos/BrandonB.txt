@@ -1,0 +1,1 @@
+http://127.0.0.1:3000/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4eb4a6c145041a19e2e730303127521ecc32bbe2/potato.jpg
