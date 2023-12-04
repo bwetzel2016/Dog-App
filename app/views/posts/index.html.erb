@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Receptionist Robot Dog</title>
+  <title>Daisy the robot dog</title>
   <%= favicon_link_tag asset_path('favicon.ico') %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="custom-background">
-  <div class="flex-container">
+  <section class="flex-container">
     <% @posts.each_with_index do |post, index| %>
-      <div class="card" style="width: 25rem;">
+      <div class="card" style="width: auto; border-radius: 10px; margin: 10px;">
         <h5 class="card-header text-black">
           <%= post.date %>
           <%= post.time&.strftime('%I:%M %p') %>
@@ -39,6 +39,6 @@
         <div style="margin-bottom: 20px;"></div>
       <% end %>
     <% end %>
-  </div>
+  </section>
 </body>
 </html>

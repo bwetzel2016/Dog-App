@@ -1,0 +1,29 @@
+<body>
+  <div class="container custom-background">
+    <section class="section-dog">
+      <body class="custom-background">
+        <div class="flex-container" style="padding: 0px;">
+          <div class="card">
+            <div class="card-header text-center text-black">
+              <h3>Edit Profile</h3>
+              <h5>
+              <%= image_tag 'DAISY.png', class: "profile-picture", style: "width: 80px; height: 80px;" %>
+              </h5>
+              <small>  <%= resource.email %></small>
+              <div class="body">
+                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                  <div class="actions"><br/>
+                    <h5>Want to delete your profile?</h5>
+                    <%= button_to "Delete my profile", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, form: { "data-turbo-frame": "_top" }, class: 'btn btn-danger' %>
+                    <%= link_to "Back", :back, class:'btn btn-dark'%> 
+                  </div> 
+                <% end %>
+                </br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </section>
+  </div>
+</body>

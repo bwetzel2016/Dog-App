@@ -5,10 +5,11 @@
   
 
     <!-- Required meta tags -->
-    
+     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Robot Dog Web App</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <title>Daisy the robot dog</title>
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -38,5 +39,8 @@
     </div>
     
   </body>
+  <footer>
+  <%= render "home/footer" %>
+  </footer>
 </html>
 

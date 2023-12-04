@@ -64,8 +64,6 @@ class PostsController < ApplicationController
     redirect_to posts_path, notice: "Not Authorized to Edit This Appointment" if @post.nil?
   end
 
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
