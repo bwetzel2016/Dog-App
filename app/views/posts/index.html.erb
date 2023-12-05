@@ -5,72 +5,6 @@
   <%= favicon_link_tag asset_path('favicon.ico') %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-  function processImages() {
-    // CSRF
-    var csrfToken = document.querySelector("meta[name=csrf-token]").content;
-
-    // Select all img tags on the page
-    var imgTags = document.getElementsByTagName('img');
-
-    // Iterate through the img tags
-    for (var i = 0; i < imgTags.length; i++) {
-        // Get the source attribute of each img tag
-        var src = imgTags[i].getAttribute('src');
-        console.log(src)
-        // Check if the source contains "active_storage"
-        if (src && src.includes('active_storage')) {
-            // Extract room_number and first_name values
-            var newId = imgTags[i].getAttribute('id');
-            //console.log(roomNumberElement.textContent)
-            var roomNumberText = newId.slice(0, -1);
-            var roomNumber = newId.slice(-1);
-            var firstName = newId.slice(0, -1);
-            console.log(firstName,roomNumber)
-            console.log("Found tags")
-            // Create a new image element
-            var newImg = new Image();
-
-            // Set the source of the new image
-            newImg.src = src;
-            console.log("test")
-            // Set up an onload event for the new image
-
-            fetch('/posts/send_photo', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded',
-                  'X-CSRF-Token': csrfToken,
-              },
-              body: `text=${encodeURIComponent(src)}&roomNumber=${roomNumber}&firstName=${firstName}`,
-          })
-          .then(response => response.text())
-          .then(result => console.log(result))
-          .catch(error => console.error('Error:', error));
-        
-
-            newImg.onload = function () {
-                console.log("Saving image event")
-                // Create a canvas to draw the image
-                var canvas = document.createElement('canvas');
-                canvas.width = newImg.width;
-                canvas.height = newImg.height;
-
-                // Get the 2D context of the canvas
-                var ctx = canvas.getContext('2d');
-
-                // Draw the image on the canvas
-                ctx.drawImage(newImg, 0, 0);
-
-                // Convert the canvas content to a data URL
-                var dataURL = canvas.toDataURL('image/jpeg');
-                // Send the image data to the server
-                };
-        }
-    }
-}
-window.onload = processImages;
-</script>
 </head>
 <body class="custom-background">
   <section class="flex-container">
@@ -88,8 +22,7 @@ window.onload = processImages;
           <% end %>
           <ul class="list-group list-group-light list-group-small border-0">
             <div class="list-group-item px-3 border-0">Appointment with <%= post.advisor %></div>
-            <div id="first_name" style="display: none;"><%= post.first_name %></div>
-            <div id = "<%= post.first_name %>" class="list-group-item px-3 border-0">Room <%= post.room_number %></div>
+            <div class="list-group-item px-3 border-0">Room <%= post.room_number %></div>
             <div class="col">
               <%= link_to 'Show', post, class: "btn btn-primary text-white"%>
               <% if post.user == current_user %>

@@ -1,15 +1,15 @@
 class PhotosController < ApplicationController
   def index
-    photo_path = Rails.root.join('public', 'photos')
-    image_files = Dir.glob(File.join(photo_path, '*.{jpg,jpeg,png,txt,gif,bmp}'))
-
-    image_list = image_files.map do |file|
+    images = ActiveStorage::Blob.all.map do |blob|
+    post = Post.find_by(id: blob.attachments.first.record_id)
+    new_filename = "#{post.first_name}#{post.room_number}.#{blob.filename.extension}"
+    blob.update(filename: new_filename)
       {
-        filename: File.basename(file),
-        url: request.base_url + '/photos/' + File.basename(file)
+        filename: "#{post.first_name}#{post.room_number}",
+        url: rails_blob_url(blob)
       }
     end
 
-    render json: image_list
+    render json: images
   end
 end
