@@ -1,38 +1,54 @@
-# README
+# 🤖 Daisy's Appointment Scheduler 🐾
 
-## Description
+Welcome to the world of Daisy, the robot dog! This project is a Rails application designed to schedule appointments for Daisy, incorporating cutting-edge facial recognition technology. Let's dive into the details! 🌟
 
-This project centers around the creation of appointments for a robot dog named Daisy through a user-friendly Rails application. The application not only allows users to create posts but also incorporates the use of their face photo for advanced facial recognition capabilities. By implementing this functionality, the project aims to provide an enhanced user experience and showcase the potential of facial recognition technology within the context of appointment scheduling.
+## 📜 Description
 
-## Installation
+This project revolves around creating appointments for Daisy, our beloved robot dog, through a user-friendly Rails application. 🐶✨ The app allows users to create posts and utilize their face photos for advanced facial recognition capabilities. By implementing this functionality, we aim to provide an enhanced user experience and showcase the potential of facial recognition technology within the context of appointment scheduling. 📅📸
 
-Install ASDF, Ruby 3.0.0, Rails 6.0.3.3, nodeJS 14.20.0, yarn 1.22.10 
+## 🤖 Meet the Unitree Go-1 Robot
 
-```asdf install ruby 3.0.0```
-```asdf install nodejs 14.20.0```
-```asdf install yarn 1.22.10```
-```gem install rails --version 6.0.3.3```
+The Unitree Go-1 Robot is a state-of-the-art quadruped robot known for its agility and intelligence. With its advanced sensors and AI capabilities, the Go-1 can navigate complex environments and perform a variety of tasks. In this project, Daisy, our Go-1 Robot, is at the heart of the appointment scheduling system, demonstrating the seamless integration of robotics and software. 🌐🤖
 
+## 🛠️ Installation
 
-## Usage
+To get started, ensure you have the following installed:
 
-start the rails server and navigate to localhost:3000 in your browser to view the application.
+- ASDF
+- Ruby 3.0.0
+- Rails 6.0.3.3
+- NodeJS 14.20.0
+- Yarn 1.22.10
 
-```rails s```
-```rails db:migrate```
-```rails db:seed```
+```bash
+asdf install ruby 3.0.0
+asdf install nodejs 14.20.0
+asdf install yarn 1.22.10
+gem install rails --version 6.0.3.3
+```
 
+## 🚀 Usage
 
-## Contributing
+Start the Rails server and navigate to `localhost:3000` in your browser to view the application. 🌐
 
-Luciano Scarpaci, Brandon Wetzel, Shahima Hossain
+```bash
+rails s
+rails db:migrate
+rails db:seed
+```
 
-## License
+## 👥 Contributing
 
-MIT License
+A big thank you to our amazing contributors:
 
-## Project status
+- Luciano Scarpaci 🎨
+- Brandon Wetzel 💻
+- Shahima Hossain 📝
 
-Completed
+## 📄 License
 
+This project is licensed under the MIT License. 📜
 
+## 🚦 Project Status
+
+The project is completed and ready for use! 🎉
