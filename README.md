@@ -45,10 +45,6 @@ A big thank you to our amazing contributors:
 - Brandon Wetzel 💻
 - Shahima Hossain 📝
 
-## 📄 License
-
-This project is licensed under the MIT License. 📜
-
 ## 🚦 Project Status
 
 The project is completed and ready for use! 🎉
