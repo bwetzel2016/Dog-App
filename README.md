@@ -36,7 +36,8 @@ rails s
 rails db:migrate
 rails db:seed
 ```
-
+## Youtube Link:
+https://www.youtube.com/watch?v=utZlSNNSZS4
 ## 👥 Contributing
 
 A big thank you to our amazing contributors:
